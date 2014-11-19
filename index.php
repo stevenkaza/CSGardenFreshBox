@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=0.8"
     name="viewport">
 
-    <title>Garden Fresh Box Wireframe</title>
+    <title>Garden Fresh Box Website</title>
     <link href="gfb.css" rel="stylesheet" type="text/css">
     <link href="/favicon.ico" rel="icon" type="image/x-icon">
     <link href=
