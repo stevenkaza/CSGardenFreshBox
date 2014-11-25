@@ -34,4 +34,8 @@ To run the webserver:
 Navigate to the route and type in 
 $VENV/bin/pserve development.ini
 
+then in your web browser url goto: 
+http://0.0.0.0:6543
+
+
 
