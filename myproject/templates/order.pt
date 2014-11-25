@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="Food!" name="description">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=0.8"
+    name="viewport">
+
+    <title>Garden Fresh Box Website</title>
+    <link href="${request.static_url('myproject:static/gfb.css')}" rel="stylesheet">
+
+    <link href="gfb.css" rel="stylesheet" type="text/css">
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+    <link href=
+    'http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Oswald:400,700,300'
+    rel='stylesheet' type='text/css'>
+    <style type="text/css">
+</style>
+</head><?php include('menus.php'); ?>
+
+<body>
+    <?php  menu(); ?>
+ <div id="menubar">
+        <a href="http://www.cabogie.com/freshbox">
+        <div class="logo RO2"></div></a>
+
+        <div class="nav">
+            <a class="navDrop transptxtBlack" href="order.php"><img src=
+            "apples.png" style=
+            "margin-top: -52px;margin-left: auto;margin-right: auto;">
+            Order</a> <a class="navDrop transptxtBlack" href=
+            "hosts.php"><img src="carrots.png" style=
+            "margin-top: -52px;margin-left: auto;margin-right: auto;">
+            Hosts</a> <a class="navDrop transptxtBlack" href=
+            "volunteer.php"><img src="onions.png" style=
+            "margin-top: -52px;margin-left: auto;margin-right: auto;">
+            Volunteer</a> <a class="transptxtBlack navDrop" href=
+            "about.php"><img src="leak.png" style=
+            "margin-top: -52px;margin-left: auto;margin-right: auto;">
+            About</a> <?php 
+                                    if(isset($_SESSION['user']) or isset($_SESSION['host'])){
+
+                                 ?> <a class="navDrop transptxtBlack" href=
+            "settings.php" style=
+            "float: right; margin:67px 20px 0 0px; color:#233f2f;font-size:14px;width:87px;">
+            <img src="gear.png" style="margin-top: -74px;"> Settings</a>
+            <a class="navDrop transptxtBlack" href="menus.php?signout=yes"
+            style=
+            "float: right; margin:58px 20px 0 0px; color:#233f2f;font-size:14px;">
+            Sign Out</a> <?php }
+                else{
+
+             ?> <a class="navDrop transptxtBlack" href="signin.php" style=
+            "float: right; margin:58px 20px 0 0px; color:#233f2f;"><img src=
+            "login.png" style="margin-top: -74px;"> Sign In</a> <?php }
+
+             ?>
+        </div>
+    </div><?php
+
+    <div id="wrapper">
+        <div class="grid listPage">
+            <div class="mainBox">
+                <div class="content">
+                    <div class="head">
+                        <p class="textTitle">Order</p>
+                    </div>
+
+                    <p class="text">Garden Fresh Box contents are seasonal.
+                    Produce included is based on quality and
+                    availability.</p><img src="order.png">
+
+                    <div class="centeredBlock" style="min-height:220px;">
+                        <div class="L" style="width:50%">
+                            <form class="padTopBot" id="order" name="order">
+                                <p class="textTitle" style=
+                                "font-size:18px;font-weight:400;width:120px;">
+                                Donation</p><a id="donate" name="donate"></a>
+                                <label><input id="email" name="email" type=
+                                "text"></label>
+
+                                <p class="textTitle" style=
+                                "font-size:18px;font-weight:400;width:120px;">
+                                Voucher</p><label><input id="pass" name=
+                                "password" type="text"></label>
+                            </form>
+
+                            <form action="">
+                                <p class="textTitle" style=
+                                "font-size:18px;font-weight:400;width:120px;">
+                                Host Site</p><select>
+                                    <option value="1">
+                                        Select Location
+                                    </option>
+
+                                    <option value="2">
+                                        2 City Drive Ottawa
+                                    </option>
+
+                                    <option value="3">
+                                        7 Denis Street Guelph
+                                    </option>
+
+                                    <option value="4">
+                                        201 Streat Street Waterloo
+                                    </option>
+                                </select>
+                            </form>
+                        </div>
+
+                        <div style=
+                        "float: right; text-align: right; width: 50%">
+                            <div class="head">
+                                <p class="textTitle" style=
+                                "text-align:center;float:none;">Total</p>
+
+                                <p class="textTitle" style=
+                                "text-align:center;float:none;font-size:18px;font-weight:400;padding-top:0px;padding-bottom:30px;">
+                                $0.00</p>
+                            </div><a class=" centeredBlock submit" href=
+                            "checkout.php" style="max-width:140px;">
+                            <p class="textTitle" style=
+                            "padding-top:5px;padding-bottom:5px;float:none;text-align:center;font-Size:23px;">
+                            Checkout</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><?php footer(); ?>
+</body>
+</html>

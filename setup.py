@@ -1,36 +1,42 @@
-try:
-    from setuptools import setup, find_packages
-except ImportError:
-    from ez_setup import use_setuptools
-    use_setuptools()
-    from setuptools import setup, find_packages
+import os
 
-setup(
-    name='helloworld',
-    version='0.1',
-    description='',
-    author='',
-    author_email='',
-    url='',
-    install_requires=[
-        "Pylons>=1.0.1rc1",
-    ],
-    setup_requires=["PasteScript>=1.6.3"],
-    packages=find_packages(exclude=['ez_setup']),
-    include_package_data=True,
-    test_suite='nose.collector',
-    package_data={'helloworld': ['i18n/*/LC_MESSAGES/*.mo']},
-    #message_extractors={'helloworld': [
-    #        ('**.py', 'python', None),
-    #        ('templates/**.mako', 'mako', {'input_encoding': 'utf-8'}),
-    #        ('public/**', 'ignore', None)]},
-    zip_safe=False,
-    paster_plugins=['PasteScript', 'Pylons'],
-    entry_points="""
-    [paste.app_factory]
-    main = helloworld.config.middleware:make_app
+from setuptools import setup, find_packages
 
-    [paste.app_install]
-    main = pylons.util:PylonsInstaller
-    """,
-)
+here = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(here, 'README.txt')) as f:
+    README = f.read()
+with open(os.path.join(here, 'CHANGES.txt')) as f:
+    CHANGES = f.read()
+
+requires = [
+    'pyramid',
+    'pyramid_chameleon',
+    'pyramid_debugtoolbar',
+    'waitress',
+    ]
+
+setup(name='MyProject',
+      version='0.0',
+      description='MyProject',
+      long_description=README + '\n\n' + CHANGES,
+      classifiers=[
+        "Programming Language :: Python",
+        "Framework :: Pyramid",
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+        ],
+      author='',
+      author_email='',
+      url='',
+      keywords='web pyramid pylons',
+      packages=find_packages(),
+      include_package_data=True,
+      zip_safe=False,
+      install_requires=requires,
+      tests_require=requires,
+      test_suite="myproject",
+      entry_points="""\
+      [paste.app_factory]
+      main = myproject:main
+      """,
+      )

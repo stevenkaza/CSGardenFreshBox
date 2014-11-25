@@ -1,3 +1,2 @@
-include helloworld/config/deployment.ini_tmpl
-recursive-include helloworld/public *
-recursive-include helloworld/templates *
+include *.txt *.ini *.cfg *.rst
+recursive-include myproject *.ico *.png *.css *.gif *.jpg *.pt *.txt *.mak *.mako *.js *.html *.xml
