@@ -19,39 +19,30 @@
 </head><?php include('menus.php'); ?>
 
 <body>
-    <div id="menubar">
+    <div id="menubarFixed">
         <a href="http://www.cabogie.com/freshbox">
         <div class="logo RO2"></div></a>
 
         <div class="nav">
-            <a class="navDrop transptxtBlack" href="/order"><img src=
+            <a class="navDrop transptxtBlack" href="order.php"><img src=
             "apples.png" style=
-            "margin-top: -52px;margin-left: auto;margin-right: auto;">
+            "margin-left: auto;margin-right: auto;">
             Order</a> <a class="navDrop transptxtBlack" href=
             "hosts.php"><img src="carrots.png" style=
-            "margin-top: -52px;margin-left: auto;margin-right: auto;">
+            "margin-left: auto;margin-right: auto;">
             Hosts</a> <a class="navDrop transptxtBlack" href=
             "volunteer.php"><img src="onions.png" style=
-            "margin-top: -52px;margin-left: auto;margin-right: auto;">
+            "margin-left: auto;margin-right: auto;">
             Volunteer</a> <a class="transptxtBlack navDrop" href=
             "about.php"><img src="leak.png" style=
-            "margin-top: -52px;margin-left: auto;margin-right: auto;">
+            "margin-left: auto;margin-right: auto;">
             About</a> <?php 
-                                    if(isset($_SESSION['user']) or isset($_SESSION['host'])){
+                                    if(isset($_SESSION['host'])){
 
                                  ?> <a class="navDrop transptxtBlack" href=
             "settings.php" style=
-            "float: right; margin:67px 20px 0 0px; color:#233f2f;font-size:14px;width:87px;">
-            <img src="gear.png" style="margin-top: -74px;"> Settings</a>
-            <a class="navDrop transptxtBlack" href="menus.php?signout=yes"
-            style=
-            "float: right; margin:58px 20px 0 0px; color:#233f2f;font-size:14px;">
-            Sign Out</a> <?php }
-                else{
-
-             ?> <a class="navDrop transptxtBlack" href="signin.php" style=
-            "float: right; margin:58px 20px 0 0px; color:#233f2f;"><img src=
-            "login.png" style="margin-top: -74px;"> Sign In</a> <?php }
+            "float: right; margin-right: 20px;">
+            <img src="gear.png"> Settings</a> <?php }
 
              ?>
         </div>
@@ -59,6 +50,7 @@
 
 
 
+    <div id="wrapper">
         <div class="grid listPage">
             <div class="mainBox">
                 <div class="content">
@@ -125,5 +117,47 @@
                 </div>
             </div>
         </div>
+    </div>
+
+
+
+
+
+        <div id="footer">
+                <div class="C">
+                    <div class="footerstuff">
+                        <img src="freshboxLogo.png" style=
+                        "display:block;margin-left:auto;margin-right:auto;">
+
+                        <div class="footC">
+                            <p style=
+                            " letter-spacing: 2px; font: 8px 'Oswald', sans-serif;background:inherit;text-align:center;font-size:13px;color:#233f2f;">
+                            Affiliated with <a class=RO2 style=color:white; href=http://www.guelphwellingtonlocalfood.ca/ >Guelph Wellington Local Food Initiative </a> </p>
+
+
+                            <p style=
+                            " letter-spacing: 2px; font: 8px 'Oswald', sans-serif;background:inherit;text-align:center;font-size:13px;color:#233f2f;padding-top:10px;padding-bottom:10px;"> 
+                            <a class="RO2" style=color:white; href=about.php >Contact</a>
+                             |
+                                        <?php 
+                                            if(isset($_SESSION['host'])){
+
+                                         ?>
+                            <a class="RO2" style=color:white; href="menus.php?signout=yes" >Sign Out  </a>
+
+                                        <?php }
+                                            else{
+
+                                         ?>
+                            <a class="RO2" style=color:white; href="signin.php" >Sign In  </a>
+                                        <?php }
+
+                                         ?> </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 </body>
 </html>
