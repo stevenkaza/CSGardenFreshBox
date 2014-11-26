@@ -45,7 +45,11 @@ if(isset($_GET['signout']) && $_GET['signout'] == 'yes'){
 
 <?php
 
+    <script src= sidescroll.js type="text/javascript"></script>
 
+
+    <script src="http://code.jquery.com/jquery-1.6.min.js" type=
+    "text/javascript"></script>
 
 function menu(){
 ?>

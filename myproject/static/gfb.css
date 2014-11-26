@@ -19,7 +19,8 @@ html,body {
     min-height:700px;
     height:100%;
     width:100%;
-    min-width:1000px;
+min-width:650;
+    min-width:600px;
     font:24px "Didact Gothic",sans-serif
 }
 
@@ -100,7 +101,8 @@ button {
     position:static;
     width:100%;
     height:auto;
-    padding:50px 0 0
+    padding:150px 0 0; /* use 50 for staticmenu */
+    
 /* the bottom margin is the negative value of the footer's height */
 }
 
@@ -207,16 +209,8 @@ button {
     width:100%
 }
 
-.logo {
-    background-image:url(freshboxLogo.png);
-    background-size:cover;
-    margin:20px 0 0 38px;
-    float:left;
-    display:block;
-    height:80px;
-    width:180px
-/*background:transparent url('cabogie.png') center top no-repeat;*/
-}
+
+
 
 .logoHome {
     background-image:url(freshboxLogo.png);
@@ -510,6 +504,8 @@ h2 {
     padding-top:20px;
     color:#a9abae;
     margin-top:40px
+    padding-top:20px;
+    padding-bottom:40px;    
 }
 
 .footBlock {
@@ -594,6 +590,11 @@ a {
     text-decoration:none
 }
 
+
+a:visited {
+    text-decoration:none
+}
+
 /* Menu Bar ************************************************************************************************************/
 /***********************************************************************************************************************/
 #homebar {
@@ -613,19 +614,6 @@ a {
     box-shadow:0 1px 10px 1px #000
 }
 
-#menubar {
-    z-index:10;
-    top:0;
-    display:block;
-    height:140px;
-    width:100%;
-    background:#5ca47a;
-    min-width:800px
-/*Shadow
-  -webkit-box-shadow: 0px 6px 8px black;
-  -moz-box-shadow: 0px 6px 8px black;
-  box-shadow:0px -1px 0px 1px black;  */
-}
 
 .mainBox .content img {
     border:none;
@@ -648,7 +636,7 @@ a {
     position:static;
     width:80%;
     max-width:900px;
-    min-width:900px;
+    min-width:500px;
 /* max-width: 700px; */
     background:#BDE1CB
 }
@@ -779,7 +767,27 @@ label {
     cursor:pointer
 }
 
-.nav {
+#menubarStatic {
+    z-index:10;
+    top:0;
+    display:block;
+    height:140px;
+    width:100%;
+    background:#5ca47a;
+    min-width:800px;
+}
+#menubarStatic .logo {
+    background-image:url(freshboxLogo.png);
+    background-size:cover;
+    margin:20px 0 0 38px;
+    float:left;
+    display:block;
+    height:80px;
+    width:180px
+}
+
+
+#menubarStatic .nav {
     min-width:350px;
     margin:0;
     margin-left:214px;
@@ -788,7 +796,7 @@ label {
     letter-spacing:2px
 }
 
-.navDrop {
+#menubarStatic .navDrop {
     float:left;
     height:55px;
     padding:7px 21px 4px;
@@ -797,6 +805,54 @@ label {
     margin:112px 0 0;
     display:block
 }
+
+
+
+#menubarFixed {
+z-index: 10;
+position: fixed;
+top: 0;
+display: block;
+height: 99px;
+width: 100%;
+background: #5ca47a;
+min-width: 650px;
+ -webkit-box-shadow: 0px 6px 8px black;
+-moz-box-shadow: 0px 6px 8px black;
+box-shadow: 0px 40px 3px 1px rgb(147, 208, 173);
+}
+
+
+#menubarFixed .logo {
+background-image: url(freshboxLogo.png);
+background-size: cover;
+margin: 5px 0 0 38px;
+float: left;
+display: block;
+height: 80px;
+width: 180px ;
+}
+
+#menubarFixed .nav {
+min-width: 350px;
+margin: 0;
+margin-left: 238px;
+font: 18px Oswald,sans-serif;
+/* word-spacing: 50px; */
+letter-spacing: 2px;
+}
+
+#menubarFixed .navDrop {
+float: left;
+height: 55px;
+padding: 7px 21px 4px;
+width: 100px;
+text-align: center;
+margin: 39px 0 0;
+display: block;
+}
+
+
 
 .txtLeft {
     text-align:left
@@ -871,7 +927,65 @@ img {
     height:100%
 }
 
+
 /*****************************************************************************************/
 /*****************************************************************************************/
 /*****************************************************************************************/
 /*****************************************************************************************/
+
+
+@media all and (max-width: 1000px){
+
+#menubarFixed {
+z-index: 10;
+position: fixed;
+top: 0;
+display: block;
+height: 99px;
+width: 100%;
+background: #5ca47a;
+min-width: 650px;
+ -webkit-box-shadow: 0px 6px 8px black;
+-moz-box-shadow: 0px 6px 8px black;
+box-shadow: 0px 40px 3px 1px rgb(147, 208, 173);
+}
+
+
+#menubarFixed .logo {
+background-image: url(freshboxLogoSmall.png);
+background-size: cover;
+margin: 8px 0 0 20px;
+float: left;
+display: block;
+height: 80px;
+width: 47px ;
+}
+
+#menubarFixed .nav {
+min-width: 350px;
+margin: 0;
+margin-left: auto;
+margin-right: auto;
+font: 18px Oswald,sans-serif;
+/* word-spacing: 50px; */
+letter-spacing: 2px;
+}
+
+#menubarFixed .navDrop {
+float: left;
+height: 55px;
+padding: 7px 10px 4px;
+width: 85px;
+text-align: center;
+margin: 52px 0 0;
+display: block;
+}
+#menubarFixed .navDrop img {
+width:auto;
+height:40px;
+}
+
+
+}
+
+

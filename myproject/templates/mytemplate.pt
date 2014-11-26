@@ -16,15 +16,28 @@
     rel='stylesheet' type='text/css'>
     <style type="text/css">
 </style>
+
+   
+    <script src="http://code.jquery.com/jquery-1.6.min.js" type=
+    "text/javascript"></script>
+    <script ssrc="${request.static_url('myproject:static/sidescroll.js')}"
+ type="text/javascript"></script>
+
+
+
+
+
+
+
+
 </head><?php include('menus.php'); ?>
 
 <body>
-    <div id="menubarFixed">
+      <div id="menubarFixed">
         <a href="http://www.cabogie.com/freshbox">
         <div class="logo RO2"></div></a>
-
-    <div class="nav">
-            <a class="navDrop transptxtBlack" href="order.php"><img src="${request.static_url('myproject:static/apples.png')}" style=
+<div class ="nav">
+    <a class="navDrop transptxtBlack" href="order"><img src="${request.static_url('myproject:static/apples.png')}" style=
             "margin-left: auto;margin-right: auto;">
             Order</a> <a class="navDrop transptxtBlack" href=
             "hosts.php"><img src="${request.static_url('myproject:static/carrots.png')}" style=
@@ -104,7 +117,7 @@
 
                     <p class="text">Like the book, the film is about an unnamed
                     Hollywood stunt performer (played by Gosling) who
-                    moonlights as a getaway driver. Prior to its September 2011
+                    moonlights as a getaway driver. Prior to its Septembe 2011
                     release, it had been shown at a number of film festivals.
                     At the 2011 Cannes Film Festival, Drive was praised and
                     received a standing ovation. Winding Refn won the
@@ -120,43 +133,8 @@
 
 
 
-
-
-        <div id="footer">
-                <div class="C">
-                    <div class="footerstuff">
-                        <img src="freshboxLogo.png" style=
-                        "display:block;margin-left:auto;margin-right:auto;">
-
-                        <div class="footC">
-                            <p style=
-                            " letter-spacing: 2px; font: 8px 'Oswald', sans-serif;background:inherit;text-align:center;font-size:13px;color:#233f2f;">
-                            Affiliated with <a class=RO2 style=color:white; href=http://www.guelphwellingtonlocalfood.ca/ >Guelph Wellington Local Food Initiative </a> </p>
-
-
-                            <p style=
-                            " letter-spacing: 2px; font: 8px 'Oswald', sans-serif;background:inherit;text-align:center;font-size:13px;color:#233f2f;padding-top:10px;padding-bottom:10px;"> 
-                            <a class="RO2" style=color:white; href=about.php >Contact</a>
-                             |
-                                        <?php 
-                                            if(isset($_SESSION['host'])){
-
-                                         ?>
-                            <a class="RO2" style=color:white; href="menus.php?signout=yes" >Sign Out  </a>
-
-                                        <?php }
-                                            else{
-
-                                         ?>
-                            <a class="RO2" style=color:white; href="signin.php" >Sign In  </a>
-                                        <?php }
-
-                                         ?> </p>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
 </body>
 </html>
+
+
+

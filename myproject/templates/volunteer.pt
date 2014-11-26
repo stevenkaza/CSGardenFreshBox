@@ -41,7 +41,34 @@
 </head><?php include('menus.php'); ?>
 
 <body>
-    <?php menu(); ?>
+  <div id="menubarFixed">
+        <a href="http://www.cabogie.com/freshbox">
+        <div class="logo RO2"></div></a>
+
+    <div class="nav">
+            <a class="navDrop transptxtBlack" href="order.php"><img src="${request.static_url('myproject:static/apples.png')}" style=
+            "margin-left: auto;margin-right: auto;">
+            Order</a> <a class="navDrop transptxtBlack" href=
+            "hosts.php"><img src="${request.static_url('myproject:static/carrots.png')}" style=
+            "margin-left: auto;margin-right: auto;">
+            Hosts</a> <a class="navDrop transptxtBlack" href=
+            "volunteer.php"><img src="${request.static_url('myproject:static/onions.png')}" style=
+            "margin-left: auto;margin-right: auto;">
+            Volunteer</a> <a class="transptxtBlack navDrop" href=
+            "about.php"><img src="${request.static_url('myproject:static/leak.png')}" style=
+            "margin-left: auto;margin-right: auto;">
+            About</a> <?php
+                                    if(isset($_SESSION['host'])){
+ 
+                                 ?> <a class="navDrop transptxtBlack" href=
+            "settings.php" style=
+            "float: right; margin-right: 20px;">
+            <img src="${request.static_url('myproject:static/gear.png')}"> Settings</a> <?php }
+ 
+             ?>
+        </div>
+    </div>
+
 
     <div id="wrapper">
         <div class="grid listPage">
@@ -89,7 +116,6 @@
 
 
 
-    </div> <!-- wrapper end -->
 
 
 
