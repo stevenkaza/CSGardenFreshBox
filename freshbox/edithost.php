@@ -1,20 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
     <meta content="Food!" name="description">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=0.8"
-    name="viewport">
-
     <title>Garden Fresh Box Wireframe</title>
-    <link href="gfb.css" rel="stylesheet" type="text/css">
-    <link href="/favicon.ico" rel="icon" type="image/x-icon">
-    <link href=
-    'http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Oswald:400,700,300'
-    rel='stylesheet' type='text/css'>
-    <style type="text/css">
-</style>
-</head><?php include('menus.php'); ?>
+   <?php include('menus.php'); ?>
+</head>
 
 <body>
     <?php  menu(); ?>

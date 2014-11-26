@@ -3,17 +3,9 @@
 
 <head>
     
-	<meta charset="utf-8">
 	<meta name="description" content="Food!">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.8">
-     
 	<title>Garden Fresh Box Wireframe</title>
-	<link rel="stylesheet" href="gfb.css" type="text/css">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Oswald:400,700,300' rel='stylesheet' type='text/css'>
-	<style type="text/css"></style>
-
-     <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
+<?php include('menus.php'); ?>
 <script type="text/javascript">
 $(document).ready(function() {
 
@@ -41,7 +33,6 @@ $('input[name="new2"]').focus(function() {
 </script>
 </head>
 
-<?php include('menus.php'); ?>
  
 <body>
         <?php menu(); ?>

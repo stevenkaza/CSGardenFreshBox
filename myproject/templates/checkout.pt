@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
     <meta content="Food!" name="description">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=0.8"
-    name="viewport">
-
+    
     <title>Garden Fresh Box Wireframe</title>
-    <link href="${request.static_url('myproject:static/gfb.css')}" rel="stylesheet">
-    <link href="/favicon.ico" rel="icon" type="image/x-icon">
-    <link href=
-    'http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Oswald:400,700,300'
-    rel='stylesheet' type='text/css'>
-    <style type="text/css">
-</style>
-</head><?php include('menus.php'); ?>
+   <?php include('menus.php'); ?>
+</head>
 
 <body>
     <?php  menu(); ?>
@@ -25,10 +16,18 @@
                 <div class="content">
                     <div class="head">
                         <p class="textTitle">Checkout</p>
-                    </div><img src="checkout.png"> <?php 
+                    </div>
+
+                    
+
+
+
+
+                    <?php 
                         if(!isset($_SESSION['host']) && !isset($_SESSION['user'])){
                     ?>
 
+                    <!-- IF USER LOGGED IN PUT USER CREDENTIALS -->
                     <div class="padTopBot" style=
                     "width:50%;margin-right:auto;margin-left:auto;">
                         <form class="padTopBot" id="order" name="order">
@@ -85,6 +84,22 @@
                     </div><?php 
                         }
                     ?>
+                    
+                    <!-- SHOULD BE FAIRLY SIMPLE TO ADD THESE VALUES IN FROM THE ORDERS PAGE (I think) -->
+
+                    <p class=text style="max-width:100%;margin-right:0px; text-align:right;">
+                    Pickup Location: Street, City</p> <br>
+
+                    <p class=text style="max-width:100%;margin-right:0px; text-align:right;">
+                    2 Large Boxes ------- $0.00</p>
+                    <p class=text style="max-width:100%;margin-right:0px; text-align:right;">
+                    2 Small Boxes ------- $0.00</p>
+                    <p class=text style="max-width:100%;margin-right:0px; text-align:right;">
+                    Donation ------- $0.00</p><br>
+
+
+                    <!----------------------------------------------------------------------------- -->
+
 
                     <p class="textTitle" style=
                     "float:none;text-align:right;margin-top:-30px;">Total:
