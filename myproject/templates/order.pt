@@ -64,7 +64,7 @@ input.qtyminus { width:25px; height:25px;}
         <div class="logo RO2"></div></a>
 
     <div class="nav">
-            <a class="navDrop transptxtBlack" href="order"><img src="${request.static_url('myproject:static/apples.png')}" style=
+            <a class="navDrop transptxtBlack" href="order.php"><img src="${request.static_url('myproject:static/apples.png')}" style=
             "margin-left: auto;margin-right: auto;">
             Order</a> <a class="navDrop transptxtBlack" href=
             "hosts.php"><img src="${request.static_url('myproject:static/carrots.png')}" style=
