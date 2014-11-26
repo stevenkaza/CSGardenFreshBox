@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
     <meta content="Food!" name="description">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=0.8"
-    name="viewport">
-
     <title>Garden Fresh Box Wireframe</title>
-    <link href="gfb.css" rel="stylesheet" type="text/css">
-    <link href="/favicon.ico" rel="icon" type="image/x-icon">
-    <link href=
-    'http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Oswald:400,700,300'
-    rel='stylesheet' type='text/css'>
-    <style type="text/css">
-</style>
-    <script src="http://code.jquery.com/jquery-1.6.min.js" type=
-    "text/javascript"></script>
+   <?php include('menus.php'); ?>
     <script type="text/javascript">
 $(function(){
     $('#mylink').click(function(){ 
@@ -50,7 +38,7 @@ $(function(){
 
 
     </script>
-</head><?php include('menus.php'); ?>
+</head>
 
 <body>
     <?php menu(); ?>
@@ -75,19 +63,19 @@ $(function(){
                         <label><input id="pass" name="password" onfocus=
                         "this.type='password'" style="color:lightgray;" type=
                         "text" value="Password"></label>
-                    </form><a class=" centeredBlock submit" href=
-                    "menus.php?signin=user" id="submit" name="submit">
+                    </form><a class=" centeredBlock submit" href="menus.php?signin=host" id="submit" name="submit">
                     <p class="textTitle" style=
                     "padding-top:5px;padding-bottom:5px;float:none;text-align:center;font-Size:23px;">
                     Submit</p></a>
 
+                      <!--
                     <div class="padTopBot">
                         <a class="centeredBlock" href="menus.php?signin=host">
                         <p class="textTitle" style=
                         "padding-top:5px;padding-bottom:5px;float:none;text-align:center;font-Size:14px;opacity:0.4;">
                         (Click here to sign in as a Host Site
                         Coordinator)</p></a>
-                    </div>
+                    </div>-->
 
                     <div class="padTopBot">
                         <div style="float:right;">
@@ -96,10 +84,10 @@ $(function(){
                             Forgot Password?</a>
                         </div>
 
-                        <div style="float:left">
+                      <!--  <div style="float:left">
                             <a class="textTitle RO" href="create.php" style=
                             "float:none;text-align:center;font-size:18px;font-weight:400;">
-                            Create Account</a>
+                            Create Account</a> -->
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 function scroller (){
         $(window).scroll(function(){
-               $('#menubar').css('left', 0 - $(this).scrollLeft());
+               $('#menubarFixed').css('left', 0 - $(this).scrollLeft());
                 $('#footer').css('left', 0 - $(this).scrollLeft());
                 $('#homebar').css('left', 0 - $(this).scrollLeft());
           });
