@@ -50,10 +50,9 @@ $(function(){
 
 
     </script>
-</head><?php include('menus.php'); ?>
+</head>
 
 <body>
-    <?php menu(); ?>
 
     <div id="wrapper">
         <div class="grid listPage">
@@ -69,14 +68,14 @@ $(function(){
                         In</p>
                     </div>
 
-                    <form class="centeredBlock padTopBot">
+                    <form  action="/dbConnect" class="centeredBlock padTopBot" method = "get">
                         <label><input id="email" name="email" style=
                         "color:lightgray;" type="text" value="Email"></label>
                         <label><input id="pass" name="password" onfocus=
                         "this.type='password'" style="color:lightgray;" type=
                         "text" value="Password"></label>
                     </form><a class=" centeredBlock submit" href=
-                    "menus.php?signin=user" id="submit" name="submit">
+                    "/dbConnect" id="submit" name="submit">
                     <p class="textTitle" style=
                     "padding-top:5px;padding-bottom:5px;float:none;text-align:center;font-Size:23px;">
                     Submit</p></a>
