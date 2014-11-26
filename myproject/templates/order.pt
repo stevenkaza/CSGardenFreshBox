@@ -174,7 +174,7 @@ input.qtyminus { width:25px; height:25px;}
 
                             </form>
 
-                            <form action="" >
+                            <form action="setOrder()" >
                                 <p class="textTitle" style=
                                 "font-size:18px;font-weight:400;width:100%;text-align:center;">
                                 Pick Up Location</p><br><label style=margin-left:auto;margin-right:auto;>
@@ -185,8 +185,15 @@ input.qtyminus { width:25px; height:25px;}
                                     </option>
                             <!-- ADD HOST LOCATIONS HERE WITH PYRAMIDS -->
                                     <option value="2">
-                                        Street, City
+                                        Katemore Drive, Guelph
                                     </option>
+                                    <option value="3">
+                                        Stone Road, Guelph
+                                    </option>
+                                    <option value="4">
+                                        Wellington, Guelph
+                                    </option>
+                                    
                 
                     <!----------------------------------------------------------------------------- -->
                                 </select></label>
