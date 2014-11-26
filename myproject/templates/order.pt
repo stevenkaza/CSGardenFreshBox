@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta content="Food!" name="description">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=0.8"
+    name="viewport">
+
+    <title>Garden Fresh Box Website</title>
+    <link href="${request.static_url('myproject:static/gfb.css')}" rel="stylesheet">
+
+    <link href="gfb.css" rel="stylesheet" type="text/css">
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+    <link href=
+    'http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Oswald:400,700,300'
+    rel='stylesheet' type='text/css'>
+    <style type="text/css">
+</style>
+
+   
+    <script src="http://code.jquery.com/jquery-1.6.min.js" type=
+    "text/javascript"></script>
+    <script ssrc="${request.static_url('myproject:static/sidescroll.js')}"
+ type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
     <meta content="Food!" name="description">
     <title>Garden Fresh Box Wireframe</title>
  <?php include('menus.php'); ?>
@@ -102,7 +133,7 @@ jQuery(document).ready(function(){
         <div class="logo RO2"></div></a>
 
     <div class="nav">
-            <a class="navDrop transptxtBlack" href="order.php"><img src="${request.static_url('myproject:static/apples.png')}" style=
+            <a class="navDrop transptxtBlack" href="order"><img src="${request.static_url('myproject:static/apples.png')}" style=
             "margin-left: auto;margin-right: auto;">
             Order</a> <a class="navDrop transptxtBlack" href=
             "hosts.php"><img src="${request.static_url('myproject:static/carrots.png')}" style=
@@ -184,7 +215,7 @@ jQuery(document).ready(function(){
  <div class="centeredBlock" style="min-height:220px;">
                         <div class="L" style="width:50%">
                             <p class="textTitle" style=text-align:center;float:none;font-weight:400;>Large Box - $20</p>
-                            <img src="lrgBox.png"><br>
+                            <img src="${request.static_url('myproject:static/lrgBox.png')}" ><br>
     <form id='myform' method='POST' action='#'>
     <input type='button' value='+' class="qtyplus plus2" style=width:80px;cursor:pointer;text-align:center;border-width:0px;background:rgb(87,159,120); field='quantity' />
     <input type='text' name='quantity' value='0' class='qty' style=width:80px;text-align:center />
@@ -193,7 +224,7 @@ jQuery(document).ready(function(){
                         </div> 
                         <div class="R" style="width:50%">
                             <p class="textTitle" style=text-align:center;float:none;font-weight:400;>Small Box - $15</p>
-                            <img src="smBox.png"> <br>
+                            <img src="${request.static_url('myproject:static/smBox.png')}" > <br>
     <form id='myform' method='POST' action='#'>
     <input type='button' value='+' class="qtyplus plus1" style=width:80px;cursor:pointer;border-width:0px;background:rgb(87,159,120); field='quantity2' />
     <input type='text' name='quantity2' value='0' class='qty' style=width:80px;text-align:center />
@@ -238,7 +269,7 @@ jQuery(document).ready(function(){
                     <!--ID:total is the total $ string, just calc it and upadte it real time -->
                                 <p id=total class="textTitle" style=
                                 "text-align:center;float:none;font-size:18px;font-weight:400;padding-top:0px;padding-bottom:30px;">
-                                $0.00</p>
+                                $0.00
 
 
                     <!----------------------------------------------------------------------------- -->

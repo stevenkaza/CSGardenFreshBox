@@ -70,7 +70,7 @@
                         <p class="textTitle">Some News</p>
 
                         <p class="date">Wednesday November 5th, 1988</p>
-                    </div><img src="fruti.jpg">
+                    </div><img src="${request.static_url('myproject:static/fruti.jpg')}">
 
                     <p class="text">A test. Here are some randomized
                     sentences.</p>

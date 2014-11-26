@@ -7,7 +7,7 @@ def main(global_config, **settings):
     config = Configurator(settings=settings)
     config.include('pyramid_chameleon')
     config.add_static_view('static', 'static', cache_max_age=3600)
-    config.add_route('order','/order')
+    config.add_route('order','/order.php')
     config.add_route('signin','/siginin.php')
 
     config.add_route('about','/about.php')
