@@ -1,4 +1,6 @@
 jQuery(document).ready(function(){
+    var totalVal=0;    
+
     // This button will increment the value
     $('.plus2').click(function(e){
         // Stop acting like a button
@@ -6,20 +8,14 @@ jQuery(document).ready(function(){
         // Get the field name
         fieldName = $(this).attr('field');
         // Get its current value
-        $.ajax{
-
-        }
         var currentVal = parseInt($('input[name='+fieldName+']').val());
-        var currentTotal = $("#total").val(); 
-        alert(currentTotal);
-        currentTotal = currentTotal + 20; 
-        alert("come on");
-        $("#total").val(currentTotal);
-        $("#total").append(currentTotal);
         // If is not undefined
         if (!isNaN(currentVal)) {
             // Increment
             $('input[name='+fieldName+']').val(currentVal + 1);
+            totalVal=totalVal + 20;
+
+            $("#total").html("$" + totalVal + ".00");
         } else {
             // Otherwise put a 0 there
             $('input[name='+fieldName+']').val(0);
@@ -37,6 +33,8 @@ jQuery(document).ready(function(){
         if (!isNaN(currentVal) && currentVal > 0) {
             // Decrement one
             $('input[name='+fieldName+']').val(currentVal - 1);
+            totalVal=totalVal - 20;
+            $("#total").html("$" + totalVal + ".00");
         } else {
             // Otherwise put a 0 there
             $('input[name='+fieldName+']').val(0);
@@ -56,6 +54,8 @@ jQuery(document).ready(function(){
         if (!isNaN(currentVal)) {
             // Increment
             $('input[name='+fieldName+']').val(currentVal + 1);
+            totalVal=totalVal + 15;
+            $("#total").html("$" + totalVal + ".00");
         } else {
             // Otherwise put a 0 there
             $('input[name='+fieldName+']').val(0);
@@ -73,6 +73,8 @@ jQuery(document).ready(function(){
         if (!isNaN(currentVal) && currentVal > 0) {
             // Decrement one
             $('input[name='+fieldName+']').val(currentVal - 1);
+            totalVal=totalVal - 15;
+            $("#total").html("$" + totalVal + ".00");
         } else {
             // Otherwise put a 0 there
             $('input[name='+fieldName+']').val(0);
